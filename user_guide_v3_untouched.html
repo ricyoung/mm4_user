@@ -1,0 +1,2919 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf8">
+<title>Minimotif Miner v3.0 User Guide</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Courier;
+	panose-1:2 7 4 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Tms Rmn";
+	panose-1:2 2 6 3 4 5 5 2 3 4;}
+@font-face
+	{font-family:Helv;
+	panose-1:2 11 6 4 2 2 2 3 2 4;}
+@font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;}
+@font-face
+	{font-family:System;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Dotum;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimHei;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 2 5 9 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mincho;
+	panose-1:2 2 6 9 4 3 5 8 3 5;}
+@font-face
+	{font-family:Gulim;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Angsana New";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Cordia New";
+	panose-1:2 11 3 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Mangal;
+	panose-1:2 4 5 3 5 2 3 3 2 2;}
+@font-face
+	{font-family:Latha;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Sylfaen;
+	panose-1:1 10 5 2 5 3 6 3 3 3;}
+@font-face
+	{font-family:Vrinda;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Raavi;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Shruti;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Sendnya;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Gautami;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Tunga;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Estrangelo Edessa";
+	panose-1:3 8 6 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Lucida Grande";}
+@font-face
+	{font-family:"Adobe Arabic";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Hebrew";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Ming Std L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Adobe Ming Std L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Myungjo Std M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Adobe Myungjo Std M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Song Std L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Adobe Song Std L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pro B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pro B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pro EL";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pro EL";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pro H";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pro H";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pro L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pro L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pro M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pro M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pro R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pro R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pro B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pro B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pro EL";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pro EL";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pro H";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pro H";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pro L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pro L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pro M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pro M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pro R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pro R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Letter Gothic Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Minion Pro";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Myriad Pro";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Myriad Pro Cond";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Myriad Pro Light";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Caslon Pro Bold";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Caslon Pro";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Fangsong Std R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Adobe Fangsong Std R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Fan Heiti Std B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Adobe Fan Heiti Std B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Gothic Std B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Adobe Gothic Std B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Heiti Std R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Adobe Heiti Std R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Kaiti Std R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Adobe Kaiti Std R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Garamond Pro Bold";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Adobe Garamond Pro";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Birch Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Blackoak Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Brush Script Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Chaparral Pro";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Charlemagne Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cooper Std Black";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Giddyup Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Hobo Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pr6N B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pr6N B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pr6N EL";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pr6N EL";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pr6N H";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pr6N H";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pr6N L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pr6N L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pr6N M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pr6N M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Gothic Pr6N R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Gothic Pr6N R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pr6N B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pr6N B";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pr6N EL";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pr6N EL";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pr6N H";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pr6N H";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pr6N L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pr6N L";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pr6N M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pr6N M";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Kozuka Mincho Pr6N R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Kozuka Mincho Pr6N R";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Lithos Pro Regular";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Mesquite Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Minion Pro Cond";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Minion Pro Med";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Minion Pro SmBd";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Nueva Std Cond";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"OCR A Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Orator Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Poplar Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Prestige Elite Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Rosewood Std Regular";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Stencil Std";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Tekton Pro";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Tekton Pro Cond";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Tekton Pro Ext";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Trajan Pro";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:SWMacro;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Marlett;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Batang";
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:BatangChe;
+	panose-1:2 3 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@BatangChe";
+	panose-1:2 3 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:Gungsuh;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@Gungsuh";
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:GungsuhChe;
+	panose-1:2 3 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@GungsuhChe";
+	panose-1:2 3 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:DaunPenh;
+	panose-1:1 1 1 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:DokChampa;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Euphemia;
+	panose-1:2 11 5 3 4 1 2 2 1 4;}
+@font-face
+	{font-family:Vani;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@Gulim";
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:GulimChe;
+	panose-1:2 11 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@GulimChe";
+	panose-1:2 11 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@Dotum";
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:DotumChe;
+	panose-1:2 11 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:"\@DotumChe";
+	panose-1:2 11 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:Impact;
+	panose-1:2 11 8 6 3 9 2 5 2 4;}
+@font-face
+	{font-family:"Iskoola Pota";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Kalinga;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Kartika;
+	panose-1:2 2 5 3 3 4 4 6 2 3;}
+@font-face
+	{font-family:"Khmer UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lao UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Lucida Console";
+	panose-1:2 11 6 9 4 5 4 2 2 4;}
+@font-face
+	{font-family:"Malgun Gothic";
+	panose-1:2 11 5 3 2 0 0 2 0 4;}
+@font-face
+	{font-family:"\@Malgun Gothic";
+	panose-1:2 11 5 3 2 0 0 2 0 4;}
+@font-face
+	{font-family:Meiryo;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Meiryo";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Meiryo UI";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Meiryo UI";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Microsoft Himalaya";
+	panose-1:1 1 1 0 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"\@Microsoft JhengHei";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Microsoft YaHei";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@Microsoft YaHei";
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"\@MingLiU";
+	panose-1:2 2 5 9 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:MingLiU_HKSCS;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@MingLiU_HKSCS";
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:MingLiU-ExtB;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@MingLiU-ExtB";
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:PMingLiU-ExtB;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@PMingLiU-ExtB";
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:MingLiU_HKSCS-ExtB;
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@MingLiU_HKSCS-ExtB";
+	panose-1:2 2 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Mongolian Baiti";
+	panose-1:3 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"MS PGothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS PGothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"MS PMincho";
+	panose-1:2 2 6 0 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@MS PMincho";
+	panose-1:2 2 6 0 4 2 5 8 3 4;}
+@font-face
+	{font-family:"MV Boli";
+	panose-1:2 0 5 0 3 2 0 9 0 0;}
+@font-face
+	{font-family:"Microsoft New Tai Lue";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Nyala;
+	panose-1:2 0 5 4 7 3 0 2 0 3;}
+@font-face
+	{font-family:"Microsoft PhagsPa";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Plantagenet Cherokee";
+	panose-1:2 2 6 2 7 1 0 0 0 0;}
+@font-face
+	{font-family:"Segoe Script";
+	panose-1:2 11 5 4 2 0 0 0 0 3;}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Semibold";
+	panose-1:2 11 7 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Light";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Segoe UI Symbol";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"\@SimSun";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:NSimSun;
+	panose-1:2 1 6 9 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@NSimSun";
+	panose-1:2 1 6 9 3 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun-ExtB;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@SimSun-ExtB";
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"Microsoft Tai Le";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Shonar Bangla";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Microsoft Yi Baiti";
+	panose-1:3 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Microsoft Sans Serif";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Aparajita;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Ebrima;
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Gisha;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:Kokila;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Leelawadee;
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"Microsoft Uighur";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:MoolBoran;
+	panose-1:2 11 1 0 1 1 1 1 1 1;}
+@font-face
+	{font-family:Utsaah;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Vijaya;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Andalus;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Arabic Typesetting";
+	panose-1:3 2 4 2 4 4 6 3 2 3;}
+@font-face
+	{font-family:"Simplified Arabic";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Simplified Arabic Fixed";
+	panose-1:2 7 3 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Sakkal Majalla";
+	panose-1:2 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Traditional Arabic";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:Aharoni;
+	panose-1:2 1 8 3 2 1 4 3 2 3;}
+@font-face
+	{font-family:David;
+	panose-1:2 14 5 2 6 4 1 1 1 1;}
+@font-face
+	{font-family:FrankRuehl;
+	panose-1:2 14 5 3 6 1 1 1 1 1;}
+@font-face
+	{font-family:"Levenim MT";
+	panose-1:2 1 5 2 6 1 1 1 1 1;}
+@font-face
+	{font-family:Miriam;
+	panose-1:2 11 5 2 5 1 1 1 1 1;}
+@font-face
+	{font-family:"Miriam Fixed";
+	panose-1:2 11 5 9 5 1 1 1 1 1;}
+@font-face
+	{font-family:Narkisim;
+	panose-1:2 14 5 2 5 1 1 1 1 1;}
+@font-face
+	{font-family:Rod;
+	panose-1:2 3 5 9 5 1 1 1 1 1;}
+@font-face
+	{font-family:FangSong;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@FangSong";
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@SimHei";
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:KaiTi;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"\@KaiTi";
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:AngsanaUPC;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Browallia New";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:BrowalliaUPC;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:CordiaUPC;
+	panose-1:2 11 3 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:DilleniaUPC;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:EucrosiaUPC;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:FreesiaUPC;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:IrisUPC;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:JasmineUPC;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:KodchiangUPC;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:LilyUPC;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:DFKai-SB;
+	panose-1:3 0 5 9 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@DFKai-SB";
+	panose-1:3 0 5 9 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Lucida Sans Unicode";
+	panose-1:2 11 6 2 3 5 4 2 2 4;}
+@font-face
+	{font-family:"Arial Black";
+	panose-1:2 11 10 4 2 1 2 2 2 4;}
+@font-face
+	{font-family:"Comic Sans MS";
+	panose-1:3 15 7 2 3 3 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Medium";
+	panose-1:2 11 6 3 2 1 2 2 2 4;}
+@font-face
+	{font-family:Gabriola;
+	panose-1:4 4 6 5 5 16 2 2 13 2;}
+@font-face
+	{font-family:Georgia;
+	panose-1:2 4 5 2 5 4 5 2 3 3;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:"Segoe Print";
+	panose-1:2 0 6 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Trebuchet MS";
+	panose-1:2 11 6 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Webdings;
+	panose-1:5 3 1 2 1 5 9 6 7 3;}
+@font-face
+	{font-family:"Agency FB";
+	panose-1:2 11 5 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:Algerian;
+	panose-1:4 2 7 5 4 10 2 6 7 2;}
+@font-face
+	{font-family:"Arial Rounded MT Bold";
+	panose-1:2 15 7 4 3 5 4 3 2 4;}
+@font-face
+	{font-family:"Baskerville Old Face";
+	panose-1:2 2 6 2 8 5 5 2 3 3;}
+@font-face
+	{font-family:"Bauhaus 93";
+	panose-1:4 3 9 5 2 11 2 2 12 2;}
+@font-face
+	{font-family:"Bell MT";
+	panose-1:2 2 5 3 6 3 5 2 3 3;}
+@font-face
+	{font-family:"Berlin Sans FB";
+	panose-1:2 14 6 2 2 5 2 2 3 6;}
+@font-face
+	{font-family:"Bernard MT Condensed";
+	panose-1:2 5 8 6 6 9 5 2 4 4;}
+@font-face
+	{font-family:"Blackadder ITC";
+	panose-1:4 2 5 5 5 16 7 2 13 2;}
+@font-face
+	{font-family:"Bodoni MT";
+	panose-1:2 7 6 3 8 6 6 2 2 3;}
+@font-face
+	{font-family:"Bodoni MT Black";
+	panose-1:2 7 10 3 8 6 6 2 2 3;}
+@font-face
+	{font-family:"Bodoni MT Condensed";
+	panose-1:2 7 6 6 8 6 6 2 2 3;}
+@font-face
+	{font-family:"Bodoni MT Poster Compressed";
+	panose-1:2 7 7 6 8 6 1 5 2 4;}
+@font-face
+	{font-family:"Book Antiqua";
+	panose-1:2 4 6 2 5 3 5 3 3 4;}
+@font-face
+	{font-family:"Bradley Hand ITC";
+	panose-1:3 7 4 2 5 3 2 3 2 3;}
+@font-face
+	{font-family:"Britannic Bold";
+	panose-1:2 11 9 3 6 7 3 2 2 4;}
+@font-face
+	{font-family:Broadway;
+	panose-1:4 4 9 5 8 11 2 2 5 2;}
+@font-face
+	{font-family:"Brush Script MT";
+	panose-1:3 6 8 2 4 4 6 7 3 4;}
+@font-face
+	{font-family:"Californian FB";
+	panose-1:2 7 4 3 6 8 11 3 2 4;}
+@font-face
+	{font-family:"Calisto MT";
+	panose-1:2 4 6 3 5 5 5 3 3 4;}
+@font-face
+	{font-family:Castellar;
+	panose-1:2 10 4 2 6 4 6 1 3 1;}
+@font-face
+	{font-family:Centaur;
+	panose-1:2 3 5 4 5 2 5 2 3 4;}
+@font-face
+	{font-family:"Century Gothic";
+	panose-1:2 11 5 2 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Century Schoolbook";
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:Chiller;
+	panose-1:4 2 4 4 3 16 7 2 6 2;}
+@font-face
+	{font-family:"Colonna MT";
+	panose-1:4 2 8 5 6 2 2 3 2 3;}
+@font-face
+	{font-family:"Cooper Black";
+	panose-1:2 8 9 4 4 3 11 2 4 4;}
+@font-face
+	{font-family:"Copperplate Gothic Bold";
+	panose-1:2 14 7 5 2 2 6 2 4 4;}
+@font-face
+	{font-family:"Copperplate Gothic Light";
+	panose-1:2 14 5 7 2 2 6 2 4 4;}
+@font-face
+	{font-family:"Curlz MT";
+	panose-1:4 4 4 4 5 7 2 2 2 2;}
+@font-face
+	{font-family:"Edwardian Script ITC";
+	panose-1:3 3 3 2 4 7 7 13 8 4;}
+@font-face
+	{font-family:Elephant;
+	panose-1:2 2 9 4 9 5 5 2 3 3;}
+@font-face
+	{font-family:"Engravers MT";
+	panose-1:2 9 7 7 8 5 5 2 3 4;}
+@font-face
+	{font-family:"Eras Bold ITC";
+	panose-1:2 11 9 7 3 5 4 2 2 4;}
+@font-face
+	{font-family:"Eras Demi ITC";
+	panose-1:2 11 8 5 3 5 4 2 8 4;}
+@font-face
+	{font-family:"Eras Light ITC";
+	panose-1:2 11 4 2 3 5 4 2 8 4;}
+@font-face
+	{font-family:"Eras Medium ITC";
+	panose-1:2 11 6 2 3 5 4 2 8 4;}
+@font-face
+	{font-family:"Felix Titling";
+	panose-1:4 6 5 5 6 2 2 2 10 4;}
+@font-face
+	{font-family:"Footlight MT Light";
+	panose-1:2 4 6 2 6 3 10 2 3 4;}
+@font-face
+	{font-family:Forte;
+	panose-1:3 6 9 2 4 5 2 7 2 3;}
+@font-face
+	{font-family:"Franklin Gothic Book";
+	panose-1:2 11 5 3 2 1 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Demi";
+	panose-1:2 11 7 3 2 1 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Demi Cond";
+	panose-1:2 11 7 6 3 4 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Heavy";
+	panose-1:2 11 9 3 2 1 2 2 2 4;}
+@font-face
+	{font-family:"Franklin Gothic Medium Cond";
+	panose-1:2 11 6 6 3 4 2 2 2 4;}
+@font-face
+	{font-family:"Freestyle Script";
+	panose-1:3 8 4 2 3 2 5 11 4 4;}
+@font-face
+	{font-family:"French Script MT";
+	panose-1:3 2 4 2 4 6 7 4 6 5;}
+@font-face
+	{font-family:Gigi;
+	panose-1:4 4 5 4 6 16 7 2 13 2;}
+@font-face
+	{font-family:"Gill Sans MT Ext Condensed Bold";
+	panose-1:2 11 9 2 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gill Sans MT";
+	panose-1:2 11 5 2 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gill Sans MT Condensed";
+	panose-1:2 11 5 6 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gill Sans Ultra Bold";
+	panose-1:2 11 10 2 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gill Sans Ultra Bold Condensed";
+	panose-1:2 11 10 6 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Gloucester MT Extra Condensed";
+	panose-1:2 3 8 8 2 6 1 1 1 1;}
+@font-face
+	{font-family:"Goudy Old Style";
+	panose-1:2 2 5 2 5 3 5 2 3 3;}
+@font-face
+	{font-family:"Goudy Stout";
+	panose-1:2 2 9 4 7 3 11 2 4 1;}
+@font-face
+	{font-family:Haettenschweiler;
+	panose-1:2 11 7 6 4 9 2 6 2 4;}
+@font-face
+	{font-family:"Harlow Solid Italic";
+	panose-1:4 3 6 4 2 15 2 2 13 2;}
+@font-face
+	{font-family:Harrington;
+	panose-1:4 4 5 5 5 10 2 2 7 2;}
+@font-face
+	{font-family:"High Tower Text";
+	panose-1:2 4 5 2 5 5 6 3 3 3;}
+@font-face
+	{font-family:"Imprint MT Shadow";
+	panose-1:4 2 6 5 6 3 3 3 2 2;}
+@font-face
+	{font-family:Jokerman;
+	panose-1:4 9 6 5 6 13 6 2 7 2;}
+@font-face
+	{font-family:"Juice ITC";
+	panose-1:4 4 4 3 4 10 2 2 2 2;}
+@font-face
+	{font-family:"Kristen ITC";
+	panose-1:3 5 5 2 4 2 2 3 2 2;}
+@font-face
+	{font-family:"Kunstler Script";
+	panose-1:3 3 4 2 2 6 7 13 13 6;}
+@font-face
+	{font-family:"Lucida Bright";
+	panose-1:2 4 6 2 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Lucida Calligraphy";
+	panose-1:3 1 1 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Lucida Fax";
+	panose-1:2 6 6 2 5 5 5 2 2 4;}
+@font-face
+	{font-family:"Lucida Handwriting";
+	panose-1:3 1 1 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:Magneto;
+	panose-1:4 3 8 5 5 8 2 2 13 2;}
+@font-face
+	{font-family:"Maiandra GD";
+	panose-1:2 14 5 2 3 3 8 2 2 4;}
+@font-face
+	{font-family:"Matura MT Script Capitals";
+	panose-1:3 2 8 2 6 6 2 7 2 2;}
+@font-face
+	{font-family:Mistral;
+	panose-1:3 9 7 2 3 4 7 2 4 3;}
+@font-face
+	{font-family:"Modern No\. 20";
+	panose-1:2 7 7 4 7 5 5 2 3 3;}
+@font-face
+	{font-family:"Monotype Corsiva";
+	panose-1:3 1 1 1 1 2 1 1 1 1;}
+@font-face
+	{font-family:"Niagara Engraved";
+	panose-1:4 2 5 2 7 7 3 3 2 2;}
+@font-face
+	{font-family:"Niagara Solid";
+	panose-1:4 2 5 2 7 7 2 2 2 2;}
+@font-face
+	{font-family:"OCR A Extended";
+	panose-1:2 1 5 9 2 1 2 1 3 3;}
+@font-face
+	{font-family:"Old English Text MT";
+	panose-1:3 4 9 2 4 5 8 3 8 6;}
+@font-face
+	{font-family:Onyx;
+	panose-1:4 5 6 2 8 7 2 2 2 3;}
+@font-face
+	{font-family:"Palace Script MT";
+	panose-1:3 3 3 2 2 6 7 12 11 5;}
+@font-face
+	{font-family:Papyrus;
+	panose-1:3 7 5 2 6 5 2 3 2 5;}
+@font-face
+	{font-family:Parchment;
+	panose-1:3 4 6 2 4 7 8 4 8 4;}
+@font-face
+	{font-family:Perpetua;
+	panose-1:2 2 5 2 6 4 1 2 3 3;}
+@font-face
+	{font-family:"Perpetua Titling MT";
+	panose-1:2 2 5 2 6 5 5 2 8 4;}
+@font-face
+	{font-family:Playbill;
+	panose-1:4 5 6 3 10 6 2 2 2 2;}
+@font-face
+	{font-family:"Poor Richard";
+	panose-1:2 8 5 2 5 5 5 2 7 2;}
+@font-face
+	{font-family:Pristina;
+	panose-1:3 6 4 2 4 4 6 8 2 4;}
+@font-face
+	{font-family:"Rage Italic";
+	panose-1:3 7 5 2 4 5 7 7 3 4;}
+@font-face
+	{font-family:Ravie;
+	panose-1:4 4 8 5 5 8 9 2 6 2;}
+@font-face
+	{font-family:Rockwell;
+	panose-1:2 6 6 3 2 2 5 2 4 3;}
+@font-face
+	{font-family:"Rockwell Condensed";
+	panose-1:2 6 6 3 5 4 5 2 1 4;}
+@font-face
+	{font-family:"Rockwell Extra Bold";
+	panose-1:2 6 9 3 4 5 5 2 4 3;}
+@font-face
+	{font-family:"Informal Roman";
+	panose-1:3 6 4 2 3 4 6 11 2 4;}
+@font-face
+	{font-family:"Script MT Bold";
+	panose-1:3 4 6 2 4 6 7 8 9 4;}
+@font-face
+	{font-family:"Showcard Gothic";
+	panose-1:4 2 9 4 2 1 2 2 6 4;}
+@font-face
+	{font-family:"Snap ITC";
+	panose-1:4 4 10 7 6 10 2 2 2 2;}
+@font-face
+	{font-family:Stencil;
+	panose-1:4 4 9 5 13 8 2 2 4 4;}
+@font-face
+	{font-family:"Tw Cen MT";
+	panose-1:2 11 6 2 2 1 4 2 6 3;}
+@font-face
+	{font-family:"Tw Cen MT Condensed";
+	panose-1:2 11 6 6 2 1 4 2 2 3;}
+@font-face
+	{font-family:"Tempus Sans ITC";
+	panose-1:4 2 4 4 3 13 7 2 2 2;}
+@font-face
+	{font-family:"Viner Hand ITC";
+	panose-1:3 7 5 2 3 5 2 2 2 3;}
+@font-face
+	{font-family:Vivaldi;
+	panose-1:3 2 6 2 5 5 6 9 8 4;}
+@font-face
+	{font-family:"Vladimir Script";
+	panose-1:3 5 4 2 4 4 7 7 3 5;}
+@font-face
+	{font-family:"Wide Latin";
+	panose-1:2 10 10 7 5 5 5 2 4 4;}
+@font-face
+	{font-family:"Berlin Sans FB Demi";
+	panose-1:2 14 8 2 2 5 2 2 3 6;}
+@font-face
+	{font-family:"Lucida Sans";
+	panose-1:2 11 6 2 4 5 2 2 2 4;}
+@font-face
+	{font-family:"Lucida Sans Typewriter";
+	panose-1:2 11 5 9 3 5 4 3 2 4;}
+@font-face
+	{font-family:"Tw Cen MT Condensed Extra Bold";
+	panose-1:2 11 8 3 2 2 2 2 2 4;}
+@font-face
+	{font-family:"MS Outlook";
+	panose-1:5 1 1 0 1 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"MT Extra";
+	panose-1:5 5 1 2 1 2 5 2 2 2;}
+@font-face
+	{font-family:Nina;
+	panose-1:2 11 6 6 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Segoe Condensed";
+	panose-1:2 11 6 6 4 2 0 2 2 3;}
+@font-face
+	{font-family:"SWGamekeys MT";
+	panose-1:5 1 1 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:"Myriad Web Pro";
+	panose-1:2 11 5 3 3 4 3 2 2 4;}
+@font-face
+	{font-family:Mathematica1;
+	panose-1:5 0 5 2 6 1 0 0 0 1;}
+@font-face
+	{font-family:Mathematica1Mono;
+	panose-1:5 6 4 0 3 1 0 0 1 1;}
+@font-face
+	{font-family:Mathematica2;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica2Mono;
+	panose-1:5 0 4 0 3 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica3;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica3Mono;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica4;
+	panose-1:5 1 4 0 4 1 1 0 1 1;}
+@font-face
+	{font-family:Mathematica4Mono;
+	panose-1:5 1 4 0 4 1 1 0 1 1;}
+@font-face
+	{font-family:Mathematica5;
+	panose-1:2 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica5Mono;
+	panose-1:2 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica6;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica6Mono;
+	panose-1:0 0 7 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica7;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Mathematica7Mono;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Zapfino;
+	panose-1:3 3 3 0 4 7 7 7 12 3;}
+@font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 6 6 2 2 2 3 2 4;}
+@font-face
+	{font-family:"Bitstream Vera Sans Mono";
+	panose-1:2 11 6 9 3 8 4 2 2 4;}
+@font-face
+	{font-family:Candara;
+	panose-1:2 14 5 2 3 3 3 2 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:Constantia;
+	panose-1:2 3 6 2 5 3 6 3 3 3;}
+@font-face
+	{font-family:Corbel;
+	panose-1:2 11 5 3 2 2 4 2 2 4;}
+@font-face
+	{font-family:"Wingdings 2";
+	panose-1:5 2 1 2 1 5 7 7 7 7;}
+@font-face
+	{font-family:"Wingdings 3";
+	panose-1:5 4 1 2 1 8 7 7 7 7;}
+@font-face
+	{font-family:Garamond;
+	panose-1:2 2 4 4 3 3 1 1 8 3;}
+@font-face
+	{font-family:"Bookman Old Style";
+	panose-1:2 5 6 4 5 5 5 2 2 4;}
+@font-face
+	{font-family:"Bookshelf Symbol 7";
+	panose-1:5 1 1 1 1 1 1 1 1 1;}
+@font-face
+	{font-family:"MS Reference Sans Serif";
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"MS Reference Specialty";
+	panose-1:5 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:ZWAdobeF;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+h2
+	{mso-style-link:"Heading 2 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+h3
+	{mso-style-link:"Heading 3 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+h4
+	{mso-style-link:"Heading 4 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Calibri","sans-serif";
+	font-weight:bold;}
+h5
+	{mso-style-link:"Heading 5 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	font-size:13.0pt;
+	font-family:"Calibri","sans-serif";
+	font-weight:bold;
+	font-style:italic;}
+h6
+	{mso-style-link:"Heading 6 Char";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	font-weight:bold;}
+p.MsoToc9, li.MsoToc9, div.MsoToc9
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:96.0pt;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{mso-style-link:"Comment Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Header Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"Body Text Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{mso-style-link:"Body Text Indent Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoListContinue2, li.MsoListContinue2, div.MsoListContinue2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoListContinue2CxSpFirst, li.MsoListContinue2CxSpFirst, div.MsoListContinue2CxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoListContinue2CxSpMiddle, li.MsoListContinue2CxSpMiddle, div.MsoListContinue2CxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoListContinue2CxSpLast, li.MsoListContinue2CxSpLast, div.MsoListContinue2CxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2
+	{mso-style-link:"Body Text First Indent 2 Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	text-indent:10.5pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Times","serif";}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{mso-style-link:"Comment Subject Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Lucida Grande";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+span.apple-style-span
+	{mso-style-name:apple-style-span;}
+span.apple-converted-space
+	{mso-style-name:apple-converted-space;}
+span.HeaderChar
+	{mso-style-name:"Header Char";
+	mso-style-link:Header;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-link:"Balloon Text";
+	font-family:"Lucida Grande";}
+span.CommentTextChar
+	{mso-style-name:"Comment Text Char";
+	mso-style-link:"Comment Text";}
+span.CommentSubjectChar
+	{mso-style-name:"Comment Subject Char";
+	mso-style-link:"Comment Subject";
+	font-weight:bold;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-link:"Heading 2";
+	font-family:"Times New Roman","serif";
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-link:"Heading 3";
+	font-family:"Cambria","serif";
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-link:"Heading 4";
+	font-family:"Calibri","sans-serif";
+	font-weight:bold;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-link:"Heading 5";
+	font-family:"Calibri","sans-serif";
+	font-weight:bold;
+	font-style:italic;}
+span.Heading6Char
+	{mso-style-name:"Heading 6 Char";
+	mso-style-link:"Heading 6";
+	font-family:"Calibri","sans-serif";
+	font-weight:bold;}
+span.BodyTextChar
+	{mso-style-name:"Body Text Char";
+	mso-style-link:"Body Text";}
+p.ReferenceLine, li.ReferenceLine, div.ReferenceLine
+	{mso-style-name:"Reference Line";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Cambria","serif";}
+span.BodyTextIndentChar
+	{mso-style-name:"Body Text Indent Char";
+	mso-style-link:"Body Text Indent";}
+span.BodyTextFirstIndent2Char
+	{mso-style-name:"Body Text First Indent 2 Char";
+	mso-style-link:"Body Text First Indent 2";}
+p.ColorfulList-Heading1, li.ColorfulList-Heading1, div.ColorfulList-Heading1
+	{mso-style-name:"Colorful List - Heading 1";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	text-indent:0in;
+	page-break-after:avoid;
+	font-size:13.5pt;
+	font-family:"Cambria","serif";
+	color:blue;
+	font-weight:bold;}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	color:teal;}
+span.msoDel
+	{mso-style-name:"";
+	text-decoration:line-through;
+	color:red;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center'><b><span
+style='font-size:24.0pt;color:blue'><img width=100 height=99
+src="http://www.schillerlab.net/mnm_guide/image001.png"
+alt="Text Box:  "></span></b></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center'><b><span
+style='font-size:24.0pt;color:blue'>Minimotif Miner v3.0 Guide</span></b></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center'><b><span
+style='color:blue'>(6/20/11)</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Introduction</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>There are thousands of short, contiguous sequences that encode
+critical molecular functions in proteins.&nbsp; Minimotif Miner (MnM) scans a protein
+sequence for the presence of these sequences, or minimotifs, which have been experimentally
+confirmed in one or more proteins.&nbsp; This is done by comparison against the
+MnM database, which includes structured annotations of the key functional details
+of such minimotifs from literature.&nbsp; MnM defines three distinct classes of
+such functions: (1) binding to other proteins, nucleic acids, or small molecules,
+(2) post-translational modification of the minimotif by an enzyme or chemical, and
+(3) protein trafficking.&nbsp; We use the term ÒminimotifÓ to distinguish short,
+functional, contiguous peptides from other types of motifs (i.e. DNA motifs, structural
+motifs).&nbsp; </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Typical results of MnM predict more than 50 new minimotifs for
+a protein query. A major limitation in this type of analysis is that the low sequence
+complexity of short minimotifs produces false positive predictions where the sequence
+occurs in a protein by random chance and not because it contains the predicted function.&nbsp;
+MnM 3.0 introduces a library of advanced heuristics and filters, which enable vast
+reduction of false positive predictions. These filters use minimotif complexity,
+protein surface location, molecular processes, cellular processes, protein-protein
+interactions, and genetic interactions. We recently combined all of these heuristics
+into a single, compound filter which makes significant progress toward solving this
+problem with high accuracy of minimotif prediction as measured by a performance
+benchmarking study which evaluated both sensitivity and specificity.</p>
+
+<p class=MsoNormal><b><i>Please cite both of these papers:</i></b></p>
+
+<p class=MsoNormal>Rajasekaran et al., 2009 Nucleic Acids Res. 37:D185-190 PMID:
+18978034</p>
+
+<p class=MsoNormal>Balla et al., 2006 Nat. Methods 3:175-177 PMID: 16489333</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Minimotif syntax and glossary</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img width=569 height=549
+src="http://www.schillerlab.net/mnm_guide/image002.png"
+alt="Text Box:  &#13;&#10;Figure 1.  Syntax model for Minimotifs used in Minimotif Miner. We started with the original model of the Seefeld Convention (Aasland et al., 2002) and expanded it to include functional definitions and extensible motif sequence and modification definitions as defined in our minimotif syntax paper (Vyas et al. 2009 BMC Genomics 10:360).&#13;&#10;"></p>
+
+<p class=MsoNormal><a name="Output_window">&nbsp;</a></p>
+
+<p class=MsoNormal>Minimotifs are much too complex to describe using sequences alone.&nbsp;
+An important aspect of MnM is its highly structured model of protein function.&nbsp;
+We define ÒminimotifsÓ in terms of their relationship to three discrete data types,
+including ÔsourceÕ protein, a ÔtargetÕ molecule, and an activity relationship between
+them (Figure 1).&nbsp; These comprise a ÒtripletÓ which unambiguously conveys function
+in a structured manner, which is utilized by many of MnMÕs algorithms. Each of these
+elements has a set of attributes (yellow ovals and purple squares).&nbsp; Each discretized
+triplet has attributes that can be assigned to the triplet (orange boxes). More
+information on the syntax model and an example of new types of analyses enabled
+by this model can be found in Vyas et al. 2009 BMC Genomics 10:360 PMID: 19656396.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><span style='font-size:18.0pt;font-weight:normal'>Elements of the minimotif
+syntax model</span></h2>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Discretized triplet
+- </b>the basic structure of a minimotif is a definition of the chemistry of the
+minimotif (its protein sequence and modifications) and a function. These are structured
+into a 3-unit entity composed of the minimotifs in its Source protein, an activity,
+and a target of the minimotif.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:13.5pt'>Example in <b>Figure 2</b>:</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><span
+style='font-size:13.5pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><img width=564
+height=239
+src="http://www.schillerlab.net/mnm_guide/image003.png"
+alt="Text Box:  &#13;&#10;Figure 2. Minimotif Definition and parts.&#13;&#10;"></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Affinity - </b>a
+measure of the strength of the interaction between the motif and its target.&nbsp;
+This is an attribute of the discretized triplet.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Structure - </b>the
+three dimensional arrangement of atoms for a minimotif bound to its target. This
+is an attribute of the discretized triplet.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Reference Ð </b>refers
+to the publication that reported discovery of the minimotif.&nbsp; In most cases
+this is a PubMed ID. This is an attribute of the discretized triplet.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Experiment Ð
+</b>the evidence that supports the identification of the minimotif.&nbsp; Most minimotifs
+are supported by more than one type of experiment. This is an attribute of the discretized
+triplet.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Source Protein
+Ð </b>the protein that contains the minimotif sequence.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Source Protein
+Type Ð </b>Minimotif sequences are presented as instances of exact sequences that
+occur in the Source Protein or as Consensus sequences which are an interpretation
+of multiple instances and indicates degeneracy.&nbsp; </p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Peptide or Protein
+Ð </b>minimotifs can be studied as short peptides or in full-length proteins, which
+is indicated.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Source Protein
+Name - </b>the name of the protein that contains the minimotif</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Source Protein
+Accession - </b>a unique combination of letters and numbers assigned to the source
+protein in a database such as RefSeq. </p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Source Protein
+Residue - </b>the location of the minimotif start (N-terminal) amino acid in the
+source protein accession number</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Motif Modification
+(M-Mod) Ð </b>a covalent change to the minimotif sequence.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>M-Mod Residue
+Ð </b>the minimotif amino acid that is covalently changed </p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>M-Mod Position
+Ð </b>the location of the minimotif amino acid that is covalently changed in the
+source protein accession number.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>M-Mod Type Ð
+</b>the name of the chemical modification of the minimotif amino acid that is covalently
+changed</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>M-Mod Type Code
+- </b>a code from the Psi-Mod database that indicates the type of modification to
+the minimotif.&nbsp; If a code for the chemical change did not exist then an internal
+code is assigned.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Activity - </b>all
+minimotifs, and likely cellular activities can be characterized into binding, modifying
+and trafficking.&nbsp; Modified indicates a covalent change to at least one amino
+acid in the minimotif. For some minimotifs, an activity may be known, but the target
+is not known.&nbsp; In this case, we use ÔrequiresÕ for the activity as the minimotif
+is required for the activity.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Activity Subclass
+Ð </b>a more specific phrase that describes the activity.&nbsp; For example ÒphosphorylatesÓ
+is a subclass of the activity ÒmodifiesÓ (in this case, the motif&nbsp; modifies,
+by phosphorylation, a protein target).</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Activity Code
+Ð </b>an identifier from the Gene Ontology database that is annotated for the Activity
+Subclass.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Activity Modification
+(A-Mod) Ð </b>a enzymatic modification of a minimotif site.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>A-Mod Residue
+Ð </b>when the target is a enzyme that covalently changes minimotif sequence, the
+activity modification describes that change.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>A-Mod Position
+- </b>the minimotif amino acid that is covalently changed.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>A-Mod Type -
+</b>the location of the minimotif amino acid that is covalently changed in the source
+protein accession number.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>A-Mod Type Code
+- </b>a code from the Psi-Mod database that indicates the type of modification to
+the minimotif.&nbsp; If a code for the chemical change did not exist then an internal
+code is assigned.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Target Ð </b>the
+protein, or other molecule that acts upon the minimotif</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Target Name -
+</b>the molecule that acts upon the minimotif sequence.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Target Accession
+- </b>a unique combination of letters and number assigned to the target, if the
+target is a protein. </p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Target Domain
+Ð </b>when a target is a protein, the target domain indicates the domain that interacts
+with or modifies the minimotif.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Target Multidomain
+Ð </b>when a target protein has more than one domain of the same type, the multidomain
+number indicates the relative position from the N-terminus.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Target Cell Localization
+- </b>the subcellular location in a cell involved in the minimotif-mediated trafficking.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>How to perform a basic query search?</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><span style='font-size:16.0pt'>INPUT WINDOW</span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.5in'>This page is used
+to enter a protein query to search the MnM database (<b>Figure 3</b>).</p>
+
+<p class=MsoNormal style='margin-left:.5in;text-indent:-.5in'>&nbsp;</p>
+
+<p class=MsoNormal><b><img width=589 height=331
+src="http://www.schillerlab.net/mnm_guide/image004.png"
+alt="Text Box:  &#13;&#10;Figure 3. Input window for the MnM website. Entering a RefSeq accession number into the Protein name or accession number box is the preferred method to perform a search. A typical default search should take less than 30 seconds.&#13;&#10;"></b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Protein name or accession number box:<span
+style='color:blue'> </span></b>Enter a RefSeq accession number of a protein or the
+protein name. The RefSeq numbers start with (NP_) and can be retrieved using text
+entries from HomoloGene. When a protein name is entered, you will be able to choose
+the species from a list of search results. Select the SEARCH MOTIF Button to initiate
+a search.</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Protein sequence box: </b>If the accession number is not available,
+or if you wish to analyze a novel protein sequence, then paste the complete protein
+sequence into the text box below. All spaces in the actual sequence must be deleted
+before the sequence is submitted. This is also useful for analyzing a segment of
+a protein. If a protein sequence is entered, the ÒBlast itÓ checkbox should be selected
+so that other information can be cross-referenced in the analysis. Select the SEARCH
+MOTIF button to initiate a search.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Species box: </b>Sequences can be analyzed with several proteomes.
+Use the pull-down menu to choose the species (human, mouse, fly, watercress, rice,
+or yeast) from which the specific protein sequence or accession number was derived.
+This allows correct display of the statistics in the results. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Sort Results Checkbox: </b>The default mode is checked and
+will set parameters to score and rank order output. Analysis of a test data set
+shows that scores above 0.24 have ~2% false positives and recovers &gt;60% of true
+positives. This provides the best analysis for selecting minimotifs.&nbsp; If the
+box is unchecked, the user can use different types of information to remove false-positives,
+but these approaches are less robust that the default filter setting. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Interpreting results and example analysis</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><span style='color:black'>We have analyzed
+Prion protein (NP_000302) as an example.&nbsp; The results are presented in a Protein
+Sequence Window, Minimotif Results Table, and Protein Details Table. A menu can
+be used to interact with these windows to perform additional analyses and refine
+the search results.</span></p>
+
+<p class=MsoNormal><b><span style='font-size:16.0pt'>Minimotif Results Table</span></b></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img width=564 height=576
+src="http://www.schillerlab.net/mnm_guide/image005.png"
+alt="Text Box:  &#13;&#10;Figure 4.  Minimotif Results Table from analysis of human Prion protein with MnM.&#13;&#10;"></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This table is organized with each row containing information
+about a minimotif in the protein (<b>Figure 4</b>). The best scoring minimotifs
+are ranked by a scoring metric depending on the filtering approach selected.&nbsp;
+Elements of the table are:&nbsp; <a name="Table_entries"></a></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Motif Expression
+</b>A list of the minimotifs that were identified in the protein query. Each expression
+is hyperlinked to the PubMed abstract for the paper describing the discovery of
+the minimotif.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Annotation </b>A
+short standardized description about the known function of the minimotif. See Vyas
+et al., 2009 BMC Genomics, for more information about the syntax.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Occurrence Position
+</b>Identifies the amino acid number where the minimotif begins in the protein.
+Multiple numbers indicates multiple minimotifs present, and their locations in the
+protein.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Combined Filter
+Score</b> (not in all views) A score that combines a number of algorithms (see section
+7) to produce our best filter algorithm.&nbsp; On test datasets, scores above 0.91
+produce no false positives and correctly predict 39% of true positives.&nbsp; Scores
+above 0.24 produce ~2% false positives and correctly predict &gt;60% of true positives.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Frequency Score</b>
+(not in all views) A score for an algorithm (see section 7) that scores and ranks
+motifs based on their complexity. Scores above 5 on a test data set were more likely
+to be a true positive.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Surface Prediction
+Score</b> (not in all views) A score for an algorithm (see section 7) that scores
+motifs based the probability that they are located on the surface of a protein.
+Scores range between 0 and 1 with higher scores reflecting a higher probability
+of being on the protein surface.</p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Number in Proteome</b>
+The number of times a minimotif is observed in a proteome selected on the input
+page.</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<h2>Protein Sequence Display Window and Menu</h2>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><img width=585 height=213
+src="http://www.schillerlab.net/mnm_guide/image006.png"
+alt="Text Box:  &#13;&#10;Figure 5. Protein Sequence Display on the Results page of the MnM website using human Prion protein as a query.&#13;&#10;"></p>
+
+<p class=MsoNormal>The protein sequence of the query is shown in this window (<b>Figure
+5</b>).&nbsp; The Menu items can be used to manipulate this display.&nbsp; Hovering
+the mouse over any highlighted item will reveal a popup bubble with additional information.
+Functions for the menu selections are described:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b>NAVIGATION</b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpMiddle style='margin-top:0in;
+margin-right:0in;margin-bottom:6.0pt;margin-left:0in'><b>New Search </b>This button
+returns to the query input page.</p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b>Reset Current Search </b>This button
+resets any changes to the original results page.</p>
+
+<p class=MsoNormal><b>VIEW</b></p>
+
+<p class=MsoNormal><b>View SNPs </b>This button will capitalize and highlight blue
+all polymorphisms in this gene entered into the SNP database. Move and hold mouse
+over highlighted sequence to view polymorphism information (see dbSNP database).
+Selecting any SNP will change the proteins sequence and highlight the change green.</p>
+
+<p class=MsoNormal><b>View selected motif </b>All minimotifs found are highlighted
+magenta in the protein sequence window. The view motif button will highlight in
+magenta any single minimotif selected in the Minimotif Results Table. Hover the
+mouse over any magenta highlighted sequence to view minimotif information.</p>
+
+<p class=MsoNormal><b>View motifs from new SNPs </b>Once one or more SNPs are selected
+from the Protein Sequence Display and are highlighted this function can be used
+to create a new SNP display table that shows all minimotifs introduced by the SNPs
+(colored green) and all minimotifs that would be eliminated by the SNP (colored
+red).&nbsp; Section 8 describes how this approach can be used to develop new hypotheses
+for the causes of disease.</p>
+
+<p class=MsoNormal><b>View homologous proteins </b>This button reveals Minimotif
+Results Table and ranks minimotifs with the most evolutionarily conserved minimotifs
+on top.&nbsp; Homologous proteins are retrieved from the HomoloGene cluster to which
+the query protein is assigned.&nbsp; Other minimotif metrics presented in this table
+are described in the View Advanced Table below.</p>
+
+<p class=MsoNormal><b>View domains </b>This button will color domains with alternating
+colors of cyan, yellow and green to indicate the different domains. Domains are
+as defined in the RefSeq database. Move and hover the mouse over a highlighted domain
+to view information.</p>
+
+<p class=MsoNormal><b>View advanced table<span style='color:blue'> </span></b>This
+table presents more detailed metrics for the minimotif frequency score.</p>
+
+<p class=MsoNormal style='margin-left:27.0pt'><b><span style='font-size:11.0pt'>Expected
+count in proteome: </span></b><span style='font-size:11.0pt'>The number of times
+the minimotif is predicted to occur in the human proteome. To calculate this, proteomes
+are downloaded from the RefSeq database and the frequency of each amino acid in
+the proteome is calculated from the equation (AAX/AATOT) where AAX is the total
+number of each amino acid in the proteome and AATOT is the total number of amino
+acids in the proteome, which is 13,715,901 for the human proteome (RefSeq Vs. 4).
+Minimotif frequencies can be calculated by multiplying individual amino acid frequencies.
+</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt'><span style='font-size:11.0pt'>For
+example if the frequency of a Pro and Leu in the human proteome are 0.062 and 0.099,
+respectively, then the probability of the PXLP minimotif is 0.062*0.099*0.062 or
+3.8 x 10<sup>-4</sup>. The inverse of this number indicates that this minimotif
+should be observed approximately every 2678 amino acids if the proteome were a random
+distribution of amino acids. When minimotifs are located at the N- or C-terminus,
+then the probability is also based on the total number of proteins in the proteome.
+For example, the probability of the same PXLP&gt; minimotif being on the C-terminus
+(&gt; indicates C-terminus, would be 3.8 x 10<sup>-4</sup> / 27,418 genes in the
+human proteome = 1.4 x 10<sup>-8</sup>, thus would only be expected to occur once
+every 7 million amino acids in the human proteome. </span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt'><b><span style='font-size:11.0pt'>Actual
+number in protein </span></b><span style='font-size:11.0pt'>The number of times
+a minimotif is observed in the protein query. </span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt'><b><span style='font-size:11.0pt'>Frequency
+Score in protein </span></b><span style='font-size:11.0pt'>is calculated by dividing
+Actual count/Expected count. </span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt'><b><span style='font-size:11.0pt'>Expected
+count in proteome</span></b><span style='font-size:11.0pt'> The number of times
+a minimotif is predicted to occur in the proteome selected on the query page.</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt'><b><span style='font-size:11.0pt'>Actual
+number in proteome </span></b><span style='font-size:11.0pt'>The number of times
+a minimotif is observed in the proteome selected on the query page.</span></p>
+
+<p class=MsoNormal style='margin-left:27.0pt'><b><span style='font-size:11.0pt'>Enrichment
+Factor in Proteome </span></b><span style='font-size:11.0pt'>is calculated by dividing
+Actual count in Proteome/Expected count in proteome. 1.00 indicates the minimotif
+is observed at its predicted frequency; numbers above 1 indicates minimotif enrichment;
+numbers below 1 indicate that the minimotif is under-enriched.</span></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>MOTIF FILTERING</b></p>
+
+<p class=MsoNormal>This function can be used to refine MnM predictions or select
+for specific types or properties of minimotifs.&nbsp; See section 7 for more detail.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>DOWNLOAD</b></p>
+
+<p class=MsoNormal>This will download the identified minimotifs into an Excel file.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>USER GUIIDE</b></p>
+
+<p class=MsoNormal>A link to this user guide.</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>VIDEOS</b></p>
+
+<p class=MsoNormal>A link to a set of video tutorials on how to use different parts
+of MnM.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2>Protein Details Window</h2>
+
+<p class=MsoNormal>This table contains information about links to other databases
+for the protein query. Protein details will not be identified if a sequence was
+entered in the text window. Try to use RefSeq numbers for best results. An example
+is shown in <b>Figure 6</b>.</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b><img width=591 height=294
+src="http://www.schillerlab.net/mnm_guide/image007.png"
+alt="Text Box:  &#13;&#10;Figure 6. The Protein Details Window from the Results page of the MnM website using human Prion protein as a query.&#13;&#10;"></b></p>
+
+<p class=MsoNormal><b>Terms:</b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Protein Accession Number</b> A unique identifier for the protein
+query from the RefSeq database.</p>
+
+<p class=MsoNormal><b>Protein</b> <b>Name</b> of protein query from the RefSeq record.</p>
+
+<p class=MsoNormal><b>Aliases</b> Other names for the protein or gene.</p>
+
+<p class=MsoNormal><b>Official symbol</b> Name of gene identified by entered accession
+number.</p>
+
+<p class=MsoNormal><b>Protein length </b>Number of amino acids in protein.</p>
+
+<p class=MsoNormal><b>Taxon ID </b>A unique number assigned to a species in the
+Taxonomy database.</p>
+
+<p class=MsoNormal><b>Species </b>The name of the organism associated with the Taxon
+ID.</p>
+
+<p class=MsoNormal><b>Chromosome </b>Chromosome number where the gene is located.</p>
+
+<p class=MsoNormal><b>Gene ID </b>The gene number from the NCBI database.</p>
+
+<p class=MsoNormal><b>Locus ID </b>The LocusLink number identifier from the NCBI
+database.</p>
+
+<p class=MsoNormal><b>OMIM ID </b>Annotation of the gene entered in the OMIM database.</p>
+
+<p class=MsoNormal><b>Unigene ID </b>ID for the entry in the UniGene database.</p>
+
+<p class=MsoNormal><b>Swiss-Prot ID </b>Identification number of analogous protein
+in the Swiss-Prot database.</p>
+
+<p class=MsoNormal><b>Map </b>Location of gene on chromosome.</p>
+
+<p class=MsoNormal><b>Source</b> Accession number for the nucleotide sequence form
+which the protein sequence is derived.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>How to choose the right minimotif Ð false positive filters?</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'>You just performed analysis with MnM and
+while you may be pleased with the amount of new information about your protein,
+you must now choose which minimotifs you will pursue with experimentation.&nbsp;
+Some minimotifs may have very strong biological relationships to your protein and
+this is a good place to start.&nbsp; To help you choose, we have built a series
+of filters based on other information about proteins. Each filter is described below
+and can be selected or deselected from the Filtering menu item at the bottom of
+the Protein Sequence Display on the Results page. <b>We recommend the combined filter,
+which has been tested to produce the least false positives and is set as the default
+filter.</b>&nbsp; The basis of each scoring metric and filter is described below:</p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'>&nbsp;</p>
+
+<h2>Filter 1: Attribute Selection</h2>
+
+<p class=MsoNormal><b><i>Rationale</i></b><i> </i>Ð In many cases a user would like
+to restrict the search for minimotifs to a particular attribute.&nbsp; This function
+allows the user to include or exclude motifs that meet a set of criteria.&nbsp;
+These include whether a minimotif is involved in binding, post-translational modification,
+or does not have a target (requires).&nbsp; Activity subclasses can be restricted
+to trafficking minimotifs, phosphorylation minimotifs, or protease minimotifs. Finally
+the results can be restricted to instances where a minimotif is known in a specific
+protein, or consensus sequences, which are interpretations of multiple instances.</p>
+
+<p class=MsoNormal><b><i>Publication</i></b> - Rajasekaran et al., 2009 Nucleic
+Acids Res. 37:D185-190 PMID: 18978034</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'>&nbsp;</p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-left:0in'><b><span
+style='font-size:16.0pt'>Filter 2: Frequency Score (FS)</span></b></p>
+
+<p class=MsoNormal><b><i>Rationale</i></b><b> -</b> Scoring identifies motifs that
+are highly over-represented in a protein. Identifies when a protein has multiple
+occurrences of the same motif.</p>
+
+<p class=MsoNormal><b><i>Calculation</i></b> -The Frequency Score (FS) measures
+the relative occurrence of motifs in the protein query with respect to the entire
+proteome. This is simply the frequency of the motif in the protein query divided
+by the frequency of the motif in the entire proteome. Frequencies are calculated
+based on the amino acid composition of the motif and the proteome. Scores represent
+the over-representation and the under-representation of a motif with scores of 1
+indicating the motif is observed at its predicted frequency.</p>
+
+<p class=MsoNormal><b><i>Validation</i></b> - Analysis of over 2300 validated motifs
+annotated in the SwissProt database show that the FS score is globally significant
+when compared to analysis with a randomized motif database. Analysis of a test dataset
+with thousands of true positives and true negatives demonstrates good performance
+of the frequency filter. See Rajasekaran et al., 2010.</p>
+
+<p class=MsoTableColorfulListAccent1 style='margin-left:0in'><b><i>Limitations</i></b>
+- Complexity of motif strongly influences FS score. Assumes a random sequence in
+proteome. Motif identified may be buried and not accessible for function. Scores
+are not calculated considering that some motifs may be specific for certain subcellular
+or extra-cellular compartment. (This can be partially addressed by choosing organelles
+on the input page). Furthermore, the motif definition, which often varies between
+references, can influence the motif score.</p>
+
+<p class=MsoNormal><b><i>Publication</i></b> - Balla et al., 2006 Nat. Methods 3:175-177
+PMID: 16489333; Rajasekaran et al., 2010 PLoS One 19:pii e12276 PMID: 20808856</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b><span style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-left:0in'><b><span
+style='font-size:16.0pt'>Filter 3: Surface Prediction Score (SPS)</span></b></p>
+
+<p class=MsoNormal><b><i>Rationale</i></b><i> </i>-In order to be a functional,
+the motif, or at least a part of it must be exposed to solvent. Thus, motifs predictions
+that are buried are likely false positive. Scores range from 0 -1 with the highest
+score preferred.</p>
+
+<p class=MsoNormal><b><i>Calculation</i></b><i> - </i><span style='color:black'>The
+SPS score is calculated assuming a two state model (buried and exposed) and each
+amino acid of the motif gets a fraction score (between 0 and 1) representing the
+probability of being in that state. For each non-wildcard residue of the motif,
+the greater of the two probabilities is considered and a normalized probability
+of the motif being in the exposed state is calculated as the SPS score of the motif.</span></p>
+
+<p class=MsoNormal><b><i>Validation</i></b> - <span style='color:black'>This surface
+prediction algorithm has a 75% accuracy in prediction of surface residues in 215
+proteins with known crystal structures (Naderi-Manesh et al., 2001 Proteins 32:452-59
+PMID: 11170200).</span></p>
+
+<p class=MsoNormal><b><i>Limitations</i></b> - Just because a motif is on the surface
+does not infer function. Some motifs may require a specific structure. Furthermore,
+this algorithm has a ~75% prediction accuracy for individual amino acids, thus has
+an inherent prediction of false positive surface residues.</p>
+
+<p class=MsoNormal><b><i>Publication</i></b> - Balla et al., 2006 Nat. Methods 3:175-177
+PMID: 16489333</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b><span style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpMiddle style='margin-left:0in'><b><span
+style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-left:0in'><b><span
+style='font-size:16.0pt'>Filter 4: Evolutionary Conservation</span></b></p>
+
+<p class=MsoNormal><b><i>Rationale</i></b><i> </i>Ð Minimotifs are often conserved
+in related species, so determining those minimotifs that are conserved can help
+to eliminate false positives. Alternatively, this function can be used to identify
+those minimotifs that are unique to a species.</p>
+
+<p class=MsoNormal><b><i>Calculation</i></b><i> Ð </i><span style='color:black'>We
+originally reported a ECS score, but after user feedback now provide just a conservation
+percentage of the minimotif in a table that can be revealed by selecting the VIEW:
+</span>View homologous proteins menu item at the bottom of the Protein Sequence
+Display window. Rows in the Minimotif Results table are ranked with the most evolutionarily
+conserved minimotifs on top.&nbsp; Homologous proteins are retrieved from the HomoloGene
+cluster to which the query protein is assigned.</p>
+
+<p class=MsoNormal><b><i>Publication</i></b> - Balla et al., 2006 Nat. Methods 3:175-177
+PMID: 16489333</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b>&nbsp;</b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-left:0in'><b><span
+style='font-size:16.0pt'>Filter 5: Protein-Protein Interaction Scores (PPIS)</span></b></p>
+
+<p class=MsoNormal><b><i>Rationale</i></b><i> </i>- The protein-protein interaction
+(PPI) filter has two principle uses. 1. Since MnM predicts many PPIs, the minimotif
+sources and target may have an interaction already identified in one of the PPI
+databases.&nbsp; This can be used to remove false positive minimotifs.&nbsp; If
+one is working on a known PPI, MnM can be used to identify minimotifs that mediate
+the PPI providing a mechanistic basis to better understand the PPI.</p>
+
+<p class=MsoNormal><b><i>Calculation</i></b><i> Ð </i><span style='color:black'>There
+are three types of PPI filters implemented in MnM.&nbsp; The PPI&nbsp; filter identifies
+those motifs where the Source and Target have a previously known PPI in one of several
+PPI databases including DIP, EntrezGene, HPRD, IntAct, MINT, and Virus-MINT.&nbsp;
+The PPI-HomoloGene filter uses a PPI in one species to predict a PPI between orthologs
+of other species. Likewise the Extended ÐPPI filter uses the same approach, but
+by using different BLAST thresholds one can choose a stringency of homologs.</span></p>
+
+<p class=MsoNormal><b><i>Validation</i></b> - <span style='color:black'>The filters
+were tested on datasets with 1000s of true positives and true negatives.&nbsp; The
+PPI filter had the highest accuracy recovering ~61% of the true positives and 2%
+false positives; this is the best performing PPI filter. The PPI-HomoloGene filter
+yielded a slightly better recovery of ~64% true positives, but a much poorer selectivity
+with ~15% false positives. This algorithm should only be used if one is interested
+in predicting minimotifs that have sources and targets with PPIs identified in other
+species. The PPI similarity algorithm has a number of different thresholds that
+performed at different levels. </span></p>
+
+<p class=MsoNormal><b><i>Limitations</i></b> Ð In our analysis of many PPI databases,
+we found minimal overlap of about 15% which is consistent with literature reports
+that these databases are not comprehensive and we may only know of ~10% of all PPIs.&nbsp;
+Therefore, true positives may be eliminated. Furthermore, the annotation of minimotifs
+is likely to be biased toward data in PPI databases.&nbsp; The accuracy will likely
+be lower than that reported in our test data set analysis.</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b><i>Publication</i></b> - Rajasekaran
+et al., 2010 Proteins 79:153-164 PMID: 20938975</p>
+
+<p class=MsoTableColorfulListAccent1CxSpMiddle style='margin-top:0in;
+margin-right:0in;margin-bottom:6.0pt;margin-left:0in'><b><span
+style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpMiddle style='margin-left:0in'><b><span
+style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpMiddle style='margin-left:0in'><b><span
+style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-left:0in'><b><span
+style='font-size:16.0pt'>Filter 6: Molecular Function Scores (MFS)</span></b></p>
+
+<p class=MsoNormal><b><i>Rationale</i></b><i> </i>- One of the most difficult problems
+for many users is selecting minimotifs that are biologically relevant to the protein
+query. There are so many functions in the cell and the user may not know of many
+of these functions and how they relate to their protein of interest. We now provide
+a Molecular Function filter, which helps with this problem, as well as eliminating
+some false positives. This filter works well for identifying minimotif targets that
+are involved in the same or different molecular functions. For example, if the query
+protein is acetylated, a user may want to only look for minimotif predictions for
+other proteins with acetylation activity.&nbsp; Alternatively, the user may only
+be interested in potential new activities.</p>
+
+<p class=MsoNormal><b><i>Calculation</i></b><i> - </i><span style='color:black'>The
+minimotif Source/Target pair is searched against the Gene Ontology (GO) database
+to determine if the two proteins have a related molecular function. Alternatively,
+the user can choose to exclude these and identify those ones suggesting different
+molecular functions.&nbsp; Since the GO database has a hierarchical directed graph
+relationship between cell processes, we can also determine if a minimotif Source/Target
+pair is related not through their most immediate molecular function (distance =
+0), but through the parent, grandparent molecular functions and so forth (distances
+= 1,2,3,4,5).&nbsp; These distances can be selected on the MnM website in the filter
+motifs menu item.&nbsp; </span></p>
+
+<p class=MsoNormal><b><i>Validation</i></b> - <span style='color:black'>The filters
+(with different distances) were tested on datasets with 1000s of true positive and
+true negative minimotifs.&nbsp; The distance =1 filter had the highest accuracy
+recovering ~59% of the true positives and 21% false positives; this is the best
+performing Molecular Function filter. As expected, the distance = 0 filter yielded
+fewer true positives (29%) and fewer false positives (12%), while the longer distances
+retrieved more true positives at the cost of more false positives. This algorithm
+should be used if one is interested in predicting minimotifs where one wants to
+identify pairs with the same or different molecular functions. For different molecular
+functions, select exclude from the motif filtering menu item.</span></p>
+
+<p class=MsoNormal><b><i>Limitations</i></b> - The prediction of minimotifs where
+the target and sources are involved in the same molecular function relies on annotations
+in the GO database which is growing.</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b><i>Publication</i></b> - Rajasekaran
+et al., 2010 PLoS One 19:pii e12276 PMID: 20808856</p>
+
+<p class=MsoTableColorfulListAccent1CxSpMiddle style='margin-top:0in;
+margin-right:0in;margin-bottom:6.0pt;margin-left:0in'><b><span
+style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-left:0in'><b><span
+style='font-size:16.0pt'>Filter 7: Cellular Function Scores (CFS)</span></b></p>
+
+<p class=MsoNormal><b><i>Rationale</i></b><i> </i>Ð One of the most difficult problems
+for many users is selecting minimotifs that are biologically relevant to the protein
+query. There are so many functions in the cell and the user may not know of many
+of these functions and how they relate to their protein of interest. We now provide
+a Cell Function filter, which helps with this problem, as well as eliminates some
+false positives. This filter works well for identifying minimotif targets that are
+involved in the same or different cell processes. For example, if the query protein
+is involved in cell division, a user may want to only look for minimotif predictions
+for other proteins involved in cell division or may want to identify predictions
+that are involved in other cellular processes.</p>
+
+<p class=MsoNormal><b><i>Calculation</i></b><i> - </i><span style='color:black'>The
+minimotif Source/Target pair is searched against the Gene Ontology (GO) database
+to determine if the two proteins are in the same cell process. Alternatively, the
+user can choose to exclude these and identify those involved in different cell processes.&nbsp;
+Since the GO database has a hierarchical directed graph relationship between cell
+processes, we can also determine if a minimotif Source/Target pair is related not
+through their most immediate cell process (distance = 0), but through the parent,
+grandparent processes and so forth (distances = 1,2,3,4,5).&nbsp; These distances
+can be selected on the MnM website in the filter motifs menu item.&nbsp; </span></p>
+
+<p class=MsoNormal><b><i>Validation</i></b> - <span style='color:black'>The filters
+(with different distances) were tested on datasets with 1000s of true positive and
+true negative minimotifs.&nbsp; The distance =1 filter had the highest accuracy
+recovering ~26% of the true positives and 6% false positives; this is the best performing
+Cell Function filter. As expected, the distance = 0 filter yielded fewer true positives
+(11%) and fewer false positives (3%), while the longer distances retrieved more
+true positives at the cost of more false positives. This algorithm should be used
+if one is interested in predicting minimotifs where one wants do identify pairs
+with the same or different cell processes. For different cell processes, select
+exclude from the motif filtering menu item.</span></p>
+
+<p class=MsoNormal><b><i>Limitations</i></b> - The prediction of minimotifs were
+that target and sources are involved in the same cell process relies on annotations
+in the GO database, which is growing.</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b><i>Publication</i></b> - Rajasekaran
+et al., 2010 PLoS One 19:pii e12276 PMID: 20808856</p>
+
+<p class=MsoTableColorfulListAccent1CxSpMiddle style='margin-top:0in;
+margin-right:0in;margin-bottom:6.0pt;margin-left:0in'><b><span
+style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-left:0in'><b><span
+style='font-size:16.0pt'>Filter 8: Genetic Interaction Scores (GIS)</span></b></p>
+
+<p class=MsoNormal><b><i>Rationale</i></b><i> </i>-There are many examples that
+have a genetic interaction between a protein containing a minimotif and a target
+protein. Since these proteins already have a functional relationship, we expect
+that a minimotif that predicts this relationship is more likely to be a true-positive
+prediction.&nbsp; This also provides a means for the functional connection between
+two genes with a known genetic interaction.</p>
+
+<p class=MsoNormal><b><i>Calculation</i></b><i> Ð </i><span style='color:black'>There
+are three algorithms listed in the Motif Filtering menu that use genetic interactions
+to reduce false positives. The Genetic Interaction filter identifies those motifs
+where the Source and Target have a previously known genetic Interaction in one of
+several genetic interaction databases.&nbsp; The GI-HomoloGene filter uses a PPI
+in one species to predict a genetic interaction between orthologs of other species.
+The GI-node filter determines if a minimotif Source/Target pair is related not through
+their most immediate genetic interaction of a minimotif source and target (distance
+= 0), but through the parent, grandparent genetic interactions of the source and
+target, and so forth (distances = 1,2,3).&nbsp; These distances can be selected
+on the MnM website in the filter motifs menu item.&nbsp; </span></p>
+
+<p class=MsoNormal><b><i>Validation</i></b> Ð <span style='color:black'>The filters
+were tested on datasets with 1000s of true positives and true negatives.&nbsp; The
+Genetic Interaction filter had the highest accuracy recovering ~21% of the true
+positives and 3% false positives; this is the best performing genetic interaction
+filter. The GI-HomoloGene filter yielded a slightly better recovery of ~24% true
+positives, but a much poorer selectivity with ~12% false positives. This algorithm
+should only be used if one is interested in predicting minimotifs that have sources
+and targets with a GIs identified in other species. The GI-node algorithm had a
+higher sensitivity.</span></p>
+
+<p class=MsoNormal><b><i>Limitations</i></b> Ð The data for genetic interaction
+is relatively sparse with yeast having the highest density.&nbsp; For this reason,
+true positives can be eliminated. </p>
+
+<p class=MsoNormal><b><i>Publication</i></b> - submitted</p>
+
+<p class=MsoTableColorfulListAccent1CxSpFirst style='margin-top:0in;margin-right:
+0in;margin-bottom:6.0pt;margin-left:0in'><b><span style='font-size:16.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoTableColorfulListAccent1CxSpLast style='margin-left:0in'><b><span
+style='font-size:16.0pt'>Filter 9: The Combined Filter&nbsp; </span></b></p>
+
+<p class=MsoNormal><b><i>Rationale</i></b><i> </i>ÐWhile each individual filter
+is effective in reducing false-positive predictions, no filter by itself is efficient.&nbsp;
+Since many types of data used for filters are independent of each other, we expected
+that some of this information may be orthogonal, thus a filter that used multiple
+pieces of information should be better at reducing false positives than any individual
+filter.&nbsp; Because the combined filter is the best performing thus far, it is
+set as the default filter on the MnM website.&nbsp; Scores above 0.24 when evaluated
+on a test data set produce very few false positives. We recommend this filter and
+threshold score.&nbsp; Choose the minimotifs from the table that are colored green
+and yellow to meet this criterion.</p>
+
+<p class=MsoNormal><b><i>Calculation</i></b><i> Ð </i><span style='color:black'>We
+used a linear regression model including most of the above filters and estimated
+coefficients by training the combined filter on a dataset containing 1000s of true
+positive and true negative minimotifs. This produces a single score for each minimotif
+that can be used to rank order them.</span></p>
+
+<p class=MsoNormal><b><i>Validation</i></b> Ð <span style='color:black'>The equation
+obtained from analysis of the training set was then used to evaluate sensitivity
+and selectivity on a test data set. Using a score threshold of 0.91 ~40% of the
+true positive minimotifs were not removed by the filter and no false positives were
+retained by the filter.&nbsp; When the highest accuracy threshold of 0.24 is used
+&gt;60% of the true positives are not removed by the filter and only 2% false positives
+are retained by the filter.&nbsp; Using the high accuracy threshold of 0.24, while
+less stringent than the 0.91 threshold, is likely to produce few false positives.</span></p>
+
+<p class=MsoNormal><b><i>Limitations</i></b> Ð As with any trained algorithm, the
+coefficients are likely to be over fit to the training data set, thus we expect
+more false positives than predicted by the validation.</p>
+
+<p class=MsoNormal><b><i>Publication</i></b> - submitted</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>How to identify new disease hypotheses?</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='color:black'>MnM can be used to develop new hypotheses
+for the causes of almost any disease. We continue with the sample analysis of Prion
+protein. Prion is an interesting example because a D178N mutation causes one of
+two diseases. Allelic variation at the 128 position determines whether individuals
+get Creutzfeldt-Jakob disease (V128) or fatal familial insomnia (M128)(Goldfarb
+et al., Science. 1992). Analysis of Prion with MnM predicts 39 potential functional
+motifs in Prion protein. Six such motifs were already experimentally confirmed and
+five motifs were closely related to known effects of Prion and are consistent with
+published experiments. </span></p>
+
+<p class=MsoNormal><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='color:black'><img width=599 height=333
+src="http://www.schillerlab.net/mnm_guide/image008.png"
+alt="Text Box:  &#13;&#10;Figure 7. Selection of SNPs in the Protein Display Window and new table of minimotifs affected by the SNPs revealed by selecting View Motifs from New SNPs in the VIEW menu.&#13;&#10;"></span></p>
+
+<p class=MsoNormal><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='color:black'>If youÕre interested in a disease specific
+protein, we can look to genomic data, such as SNPs.&nbsp; To illustrate this, you
+can (from the Minimotif Miner Results page), under the VIEW menu, select the VIEW
+SNPs and all polymorphisms are revealed in the Protein Sequence window (<b>Figure
+7</b>).&nbsp; Next select the two positions of interest (128 and 178 based on the
+importance of these positions) in causing disease.&nbsp; The box turns green and
+the amino acid changes to the polymorphism.&nbsp; Next, in the VIEW menu, select
+the VIEW Motifs From New SNPs and a new table appears (<b>Figure 7</b>) with new
+minimotifs introduced by the polymorphisms colored green and minimotifs removed
+by the polymorphisms colored red.</span></p>
+
+<p class=MsoNormal><span style='color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='color:black'>To illustrate the potential power of
+this analysis, we have painted these potential functions onto the surface of Prion
+protein for easy visualization (<b>Figure 8</b>); a program called MolMol was used
+to generate this figure. This analysis shows that the 128V variant, favoring Creutzfeldt-Jakob
+disease, eliminates a potential Vav2 SH2 binding motif (yellow) present in the 128M
+variant that favors Fatal familial Insomnia. Also, the D178N disease associated
+mutation eliminates a potential Caspase 1 cleavage site (cyan). The Caspase apoptotic
+cascade is activated by Prion. Several other motifs (N-glycosylation, Grb2-SH2 binding)
+predicted by MnM surround these important mutations and may also be responsive to
+mutation and/or allelic variation. Several motifs predicted on the opposing face
+of the protein or on the fragments of Prion not shown in this structure are not
+shown. This analysis provides an example of how MnM can be used for predicting new
+functions in proteins and generating new hypotheses for how mutations cause disease.
+Changes in minimotifs can also lead to perturbations of interaction networks and
+regulation of important catalytic activities, which may be critical for understanding
+disease related phenotypes. More information about the use of MnM for prediction
+of new disease hypotheses can be found in </span>Rajasekaran et al., 2009 Nucleic
+Acids Res. 37:D185-190 PMID: 18978034; Schiller, 2007 Current Protocols in Protein
+Science, Unit 2.12.1- 2.12.14 PMID: 18429315.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='color:black'><img width=577 height=505
+src="http://www.schillerlab.net/mnm_guide/image009.png"
+alt="Text Box:  &#13;&#10;Figure 8. Mapping of minimotifs onto the surface of the Prion protein structure.  Kaiser Science (2006) 311:925  &#13;&#10;"></span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>MnM 3.0 Database statistics</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><span style='font-family:"Arial","sans-serif"'>Table 1</span></b><span
+style='font-family:"Arial","sans-serif"'>.&nbsp; Statistics for growth of minimotif
+entries in MnM</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='margin-left:.2in;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><b><span style='font-family:"Arial","sans-serif"'>Category</span></b></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:"Arial","sans-serif"'>MnM</span></b></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:"Arial","sans-serif"'>MnM 2</span></b></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:"Arial","sans-serif"'>MnM 3</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Total</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Motif
+  Sequences</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>462</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>5089</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>294933</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Consensus
+  Sequences</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>312</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>858</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>880</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Instance
+  Sequences</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>44</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>4229</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>294053</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Post-Translational
+  Modifications</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>116</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>663</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>210949</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Binding</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>162</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>4689</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>4922</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Trafficking</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>34</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>195</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>228</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Required for
+  Cell Process</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>-</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>-</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>47</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Unique</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Motif
+  Sequences</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>312</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>2224</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>185833</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Motif
+  Proteins</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&lt;312</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>1211</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>49671</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Motif
+  Targets</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&lt;312</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>687</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>2620</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; References</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>178</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>800</span></p>
+  </td>
+  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>x</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>MnM Query Engine for advanced users</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-family:"Times","serif";color:black'>To study
+a specific motif, or directly query the MnM database, we built the Minimotif Miner
+Query Engine as an advanced tool for users (<a
+href="http://www.ncbi.nlm.nih.gov/pubmed/19656396"><span style='color:#C10202'>Vyas
+et al., 2009</span></a>). This application can select different minimotif instances
+or consensus sequences to build a super-consensus for many instances. Position specific
+scoring matrices can also be created from selected instances. This allows the data
+from multiple studies to be used to arrive at a consensus sequences. An example
+application to SH3 domains showed that there are 10 distinct types of SH3 domain
+binding motifs, which are shown in<b> Figure 9</b>.</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times","serif";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times","serif";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times","serif";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-family:"Times","serif";color:black'><img
+width=599 height=729
+src="http://www.schillerlab.net/mnm_guide/image010.png"
+alt="Text Box:  &#13;&#10;Figure 9.  Different type of SH3 binding minimotifs bind to the same face of SH3 domains, but in different orientations. SH3 binding minimotifs were grouped into the 10 minimotif categories using the relational database and Shannon Information Content similarity metric. Surface plots of structures identified for 8 of the 10 group (1ZSG, black; 1NM7, pink; 1AZE, cyan; 2BZ8, blue; 1CKA, magenta; 1OPL, red; 1RLQ orange; 1H3H, green; 1NYG, brown) are shown. The carbon backbones of SH3 domains were fit using Molmol with residues in the b1 and b4 sheets, and the 3-10 helix, to an RMSD of 0.9.  An overlay of each SH3 domain carbon backbone with its peptide minimotif is color matched and relevant minimotif side chain bonds are represented as thickened lines; the surface plot for the overlay is derived from the 1ZSG structure). Structures of the ligands for the RKxxYxxY and WxxxFxxLE minimotifs are not known, but the binding sites on the SH3 domains derived from NMR chemical shift mapping experiments are indicated. RxxPxxP and PxxxPR minimotifs show structures with the peptides in opposing orientations. The consensus sequences (C), total number of minimotifs for C (M), and percentage of potentially ambiguous ligand instances (A) in the MnM 2 database are indicated. Vyas J, et al. (2009) BMC Genomics. 10, 360. PMID: 19656396&#13;&#10;"></span></p>
+
+<p class=MsoNormal><span style='font-family:"Times","serif";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-family:"Times","serif";color:black'>PLEASE
+CITE USE OF MNM QUERY ENGINE:</span></b><span style='font-family:"Times","serif";
+color:black'> Vyas J, et al. (2009) BMC Genomics. 10, 360. PMID: 19656396</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Minimotif annotation software Ð MimoSA</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:-4.5pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Times","serif";color:black'>Where do
+all the minimotifs come from?&nbsp; To curate MnM, we use the MimoSA software.&nbsp;
+MimoSA is a downloadable </span><span style='font-family:"Times","serif"'>software
+application that can be used to manage Bioinformatics projects that annotate information
+from the scientific literature (<a
+href="http://www.ncbi.nlm.nih.gov/pubmed/20565705"><span style='color:windowtext;
+text-decoration:none'>Vyas et al, 2010)</span></a>. MimoSA (Minimotif System for
+Annotation) was built to annotate minimotifs but is readily adapted to other domains.
+It interfaces with a MySQL database and has many features such as form based entry,
+read<span style='color:black'>, write, edit, and delete functions, a database viewer,
+a paper browser, paper status manager.&nbsp; MimoSA uses a SPAM-like algorithm called
+TextMine that scores papers for desired content (<b>Figure 10</b>). </span></span></p>
+
+<p class=MsoNormal style='margin-left:-4.5pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Times","serif";color:black'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:-4.5pt;text-align:justify;text-justify:
+inter-ideograph'><b><span style='font-size:16.0pt;color:blue'><img width=587
+height=776
+src="http://www.schillerlab.net/mnm_guide/image011.png"
+alt="Text Box:  &#13;&#10;Figure 10. Screen shots of MimoSA application database management windows. A. Motif Browser shows attributes of all minimotifs in the MnM database.  B.  Minimotif Data editing or entry form for entering information in the MnM database. C. Modification form for entering minimotif modification or activity modification attributes into MnM D. Attribute for adding or editing supporting experimental techniques, structure accession numbers, and other auxiliary attributes including comments about the annotation.&#13;&#10;&#13;&#10;"></span></b></p>
+
+<p class=MsoNormal style='margin-left:-4.5pt;text-align:justify;text-justify:
+inter-ideograph'><b><span style='font-family:"Times","serif";color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-left:-4.5pt;text-align:justify;text-justify:
+inter-ideograph'><b><span style='font-family:"Times","serif";color:black'>PLEASE
+CITE USE OF MIMOSA OR TEXTMINE:</span></b><span style='font-family:"Times","serif";
+color:black'> Jay Vyas, et al. (2010). BMC Bioinformatics, 11, 328. PMID: 19656955</span></p>
+
+<p class=MsoNormal style='margin-left:-4.5pt;text-align:justify;text-justify:
+inter-ideograph'><span style='font-family:"Times","serif";color:black'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
