@@ -2,14 +2,18 @@
 
 TO DO
 ------
+• Update images links
+• replace old v3 images with v4 images
+• double check for odd chars. ( ric)
+  ÒminimotifÓ
+• Update add /email
 
-Create a Normal result and Abnormal results
 
+#later
+• Update word doc 
+• Make PDF
 
-Write section number 4 - add how to do batch script
+Fix misc types and spelling mistakes
+Add a list of M4M bio
+Add a list of reference
 
-
-double check for odd chars. ( ric)
-ÒminimotifÓ
-
-Update image links.
