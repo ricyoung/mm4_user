@@ -1687,12 +1687,12 @@ code is assigned.</p>
 minimotifs, and likely cellular activities can be characterized into binding, modifying
 and trafficking.&nbsp; Modified indicates a covalent change to at least one amino
 acid in the minimotif. For some minimotifs, an activity may be known, but the target
-is not known.&nbsp; In this case, we use ÔrequiresÕ for the activity as the minimotif
+is not known.&nbsp; In this case, we use 'requires' for the activity as the minimotif
 is required for the activity.</p>
 
 <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Activity Subclass
-  </b>a more specific phrase that describes the activity.&nbsp; For example ÒphosphorylatesÓ
-is a subclass of the activity ÒmodifiesÓ (in this case, the motif&nbsp; modifies,
+  </b>a more specific phrase that describes the activity.&nbsp; For example &quot;phosphorylates&quot;
+is a subclass of the activity &quot;modifies&quot; (in this case, the motif&nbsp; modifies,
 by phosphorylation, a protein target).</p>
 
 <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Activity Code
@@ -1741,6 +1741,7 @@ number indicates the relative position from the N-terminus.</p>
 <p class=MsoNormal style='margin-left:.25in;text-indent:-.25in'><b>Target Cell Localization
 - </b>the subcellular location in a cell involved in the minimotif-mediated trafficking.</p>
 
+<p class=MsoNormal>&nbsp;</p>
 <p class=MsoNormal>&nbsp;</p>
 
 <p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>3.<span
@@ -1795,6 +1796,7 @@ positives. This provides the best analysis for selecting minimotifs.&nbsp; If th
 box is unchecked, the user can use different types of information to remove false-positives,
 but these approaches are less robust that the default filter setting. </p>
 
+<p class=MsoNormal>&nbsp;</p>
 <p class=MsoNormal>&nbsp;</p>
 <p class=MsoNormal>&nbsp;</p>
 <p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>4.<span
@@ -1917,8 +1919,8 @@ mouse over any magenta highlighted sequence to view minimotif information.</p>
 <p class=MsoNormal><b>View motifs from new SNPs </b>Once one or more SNPs are selected
 from the Protein Sequence Display and are highlighted this function can be used
 to create a new SNP display table that shows all minimotifs introduced by the SNPs
-(colored green) and all minimotifs that would be eliminated by the SNP (colored
-red).&nbsp; Section 8 describes how this approach can be used to develop new hypotheses
+(colored <span style="color: #24F006">green</span>) and all minimotifs that would be eliminated by the SNP (colored
+<span style="color: #FF0004">red</span>).&nbsp; Section 8 describes how this approach can be used to develop new hypotheses
 for the causes of disease.</p>
 
 <p class=MsoNormal><b>View homologous proteins </b>This button reveals Minimotif
@@ -1928,7 +1930,7 @@ the query protein is assigned.&nbsp; Other minimotif metrics presented in this t
 are described in the View Advanced Table below.</p>
 
 <p class=MsoNormal><b>View domains </b>This button will color domains with alternating
-colors of cyan, yellow and green to indicate the different domains. Domains are
+colors of <span style="color: #21FFCB">cyan</span>, <span style="color: #FFFC00">yellow</span> and <span style="color: #24F006">green</span> to indicate the different domains. Domains are
 as defined in the RefSeq database. Move and hover the mouse over a highlighted domain
 to view information.</p>
 
@@ -2493,7 +2495,7 @@ alt="Text Box:  &#13;&#10;Figure 8. Mapping of minimotifs onto the surface of th
 
 <p class=ColorfulList-Heading1 style='margin-left:0in;text-indent:0in'>8.<span
 style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span>MnM 3.0 Database statistics</p>
+</span>MnM 4.0 Database statistics</p>
 
 <p class=MsoNormal>&nbsp;</p>
 
@@ -2508,20 +2510,19 @@ entries in MnM</span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><b><span style='font-family:"Arial","sans-serif"'>Category</span></b></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><b><span
   style='font-family:"Arial","sans-serif"'>MnM</span></b></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><b><span
   style='font-family:"Arial","sans-serif"'>MnM 2</span></b></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border:solid windowtext 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><b><span
-  style='font-family:"Arial","sans-serif"'>MnM 3</span></b></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:"Arial","sans-serif"'>MnM 3</span></b></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'><b><span
+  style='font-family:"Arial","sans-serif"'>MnM 4</span></b></p>
   </td>
  </tr>
  <tr>
@@ -2529,22 +2530,18 @@ entries in MnM</span></p>
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Total</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
   </td>
  </tr>
@@ -2554,23 +2551,19 @@ entries in MnM</span></p>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Motif
   Sequences</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>462</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>5089</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>294933</span></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>294933</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family: &quot;Arial&quot;, &quot;sans-serif&quot;'>1060436</span></p>
   </td>
  </tr>
  <tr>
@@ -2579,23 +2572,18 @@ entries in MnM</span></p>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Consensus
   Sequences</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>312</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>858</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>880</span></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>880</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'><span style="font-family: &quot;Arial&quot;, &quot;sans-serif&quot;">894</span></p>
   </td>
  </tr>
  <tr>
@@ -2604,23 +2592,18 @@ entries in MnM</span></p>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Instance
   Sequences</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>44</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>4229</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>294053</span></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>294053</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'>1059542</p>
   </td>
  </tr>
  <tr>
@@ -2629,23 +2612,18 @@ entries in MnM</span></p>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Post-Translational
   Modifications</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>116</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>663</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>210949</span></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>210949</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'>912735</p>
   </td>
  </tr>
  <tr>
@@ -2653,47 +2631,36 @@ entries in MnM</span></p>
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Binding</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>162</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>4689</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>4922</span></p>
-  </td>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>4922</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'>147654</p></td>
  </tr>
  <tr>
   <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Trafficking</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>34</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>195</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>228</span></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>228</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'>229</p>
   </td>
  </tr>
  <tr>
@@ -2702,23 +2669,18 @@ entries in MnM</span></p>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Required for
   Cell Process</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>-</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>-</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>47</span></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>47</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'>47</p>
   </td>
  </tr>
  <tr>
@@ -2726,24 +2688,19 @@ entries in MnM</span></p>
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>Unique</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
-  </td>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>&nbsp;</span></p></td>
  </tr>
  <tr>
   <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
@@ -2751,23 +2708,18 @@ entries in MnM</span></p>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Motif
   Sequences</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>312</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>2224</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>185833</span></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>185833</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'>590589</p>
   </td>
  </tr>
  <tr>
@@ -2776,23 +2728,18 @@ entries in MnM</span></p>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Motif
   Proteins</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>&lt;312</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>1211</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>49671</span></p>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>49671</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'>182868</p>
   </td>
  </tr>
  <tr>
@@ -2801,48 +2748,45 @@ entries in MnM</span></p>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; Motif
   Targets</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>&lt;312</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>687</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
-  style='font-family:"Arial","sans-serif"'>2620</span></p>
-  </td>
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>2620</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'>4586</p></td>
  </tr>
  <tr>
   <td width=330 valign=top style='width:247.5pt;border:solid windowtext 1.0pt;
   border-top:none;padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal><span style='font-family:"Arial","sans-serif"'>&nbsp; References</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>178</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
+  <td width=92 valign=top style='text-align: center'>
   <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>800</span></p>
   </td>
-  <td width=92 valign=top style='width:69.0pt;border-top:none;border-left:none;
-  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal align=center style='text-align:center'><span
+  <td width=92 valign=top style='text-align: center'><p class=MsoNormal align=center style='text-align:center'><span
+  style='font-family:"Arial","sans-serif"'>x</span></p></td>
+  <td width=92 valign=top style='text-align: center'>
+    <p class=MsoNormal align=center style='text-align:center'><span
   style='font-family:"Arial","sans-serif"'>x</span></p>
   </td>
+ </tr>
+ <tr>
+   <td valign=top style='font-family:"Arial","sans-serif"'>C-Terminal Minimotifs</td>
+   <td valign=top style='text-align: center'>ND</td>
+   <td valign=top style='text-align: center'>ND</td>
+   <td valign=top style='text-align: center'>ND</td>
+   <td valign=top style='text-align: center'>12808</td>
  </tr>
 </table>
 
