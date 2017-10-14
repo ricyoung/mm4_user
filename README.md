@@ -2,13 +2,7 @@
 
 TO DO
 ------
-• Update images links
-
-• replace old v3 images with v4 images
-
-• double check for odd chars. ( ric)
-  ÒminimotifÓ
-  
+ 
 • Update add /email
 
 
